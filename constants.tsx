@@ -1,14 +1,14 @@
 
-import { Unit } from './types';
-import { curriculumData } from './curriculumData';
+import { Unit } from './types.ts';
+import { curriculumData } from './curriculumData.ts';
 
 /**
  * Normaliza los datos del currículum.
  * Si el usuario proporciona una lista plana de bloques (como en el estado actual),
  * los envuelve en una Unidad 1 virtual para mantener la compatibilidad con la UI.
  */
-const normalizeCurriculum = (data: any[]): Unit[] => {
-  if (!Array.isArray(data) || data.length === 0) return [];
+const normalizeCurriculum = (data: any): Unit[] => {
+  if (!data || !Array.isArray(data) || data.length === 0) return [];
   
   // Detectamos si el primer elemento parece un Bloque (tiene secciones) 
   // en lugar de una Unidad (debería tener un array de blocks).
