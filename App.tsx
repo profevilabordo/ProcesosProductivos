@@ -5,7 +5,7 @@ import Sidebar from './components/Sidebar';
 import Header from './components/Header';
 import BlockViewer from './components/BlockViewer';
 import SelfAssessment from './components/SelfAssessment';
-import Home from './components/Home';
+import Home from './components/home';
 import Unit1Test from './components/Unit1Test';
 
 const App: React.FC = () => {
@@ -62,7 +62,6 @@ const App: React.FC = () => {
     setView('test-u1');
   };
 
-  // Selección segura de datos
   const safeCurriculum = CURRICULUM || [];
   const currentUnit = safeCurriculum.find(u => u.id === currentUnitId) || safeCurriculum[0] || null;
   const blocks = currentUnit?.blocks || [];
