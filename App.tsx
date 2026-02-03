@@ -1,13 +1,12 @@
-
 import React, { useState, useEffect } from 'react';
-import { CURRICULUM } from './constants';
-import { UserProgress, Unit, Block } from './types';
-import Sidebar from './components/Sidebar';
-import Header from './components/Header';
-import BlockViewer from './components/BlockViewer';
-import SelfAssessment from './components/SelfAssessment';
-import Home from './components/Home';
-import Unit1Test from './components/Unit1Test';
+import { CURRICULUM } from './constants.tsx';
+import { UserProgress, Unit, Block } from './types.ts';
+import Sidebar from './components/Sidebar.tsx';
+import Header from './components/Header.tsx';
+import BlockViewer from './components/BlockViewer.tsx';
+import SelfAssessment from './components/SelfAssessment.tsx';
+import Home from './components/Home.tsx';
+import Unit1Test from './components/Unit1Test.tsx';
 
 const App: React.FC = () => {
   const [view, setView] = useState<'home' | 'block' | 'assessment' | 'test-u1'>('home');
@@ -94,7 +93,6 @@ const App: React.FC = () => {
           <Sidebar 
             units={safeCurriculum} 
             currentBlockId={currentBlockId}
-            // Fix: Removed unnecessary comparison as 'view' is narrowed by the 'view !== 'test-u1'' check above
             currentView={view as 'home' | 'block' | 'assessment'}
             onSelectBlock={handleSelectBlock}
             onSelectAssessment={handleSelectAssessment}
