@@ -1,4 +1,4 @@
-import { Block } from './types.ts';
+import { Block } from './types';
 
 // Updated type from Unit[] to Block[] to match the object structure and string IDs.
 export const curriculumData: Block[] = [
@@ -42,7 +42,7 @@ export const curriculumData: Block[] = [
     },
     {
       "type": "texto",
-      "text": "En síntesis, los antecedentes históricos de los procesos productivos muestran que producir es una actividad profundamente ligada a la evolución de la humanidad. Desde la producción artesanal hasta los sistemas automatizados actuales, cada etapa refleja las necesidades, los valores y el nivel tecnológico de su tiempo. Comprender esta evolución permite analizar críticamente los sistemas productivos actuales y prepararse para los desafíos futuros, especialmente en un mundo donde la tecnología y la información ocupan un lugar central."
+      "text": "En síntesis, los antecedentes históricos de los procesos productivos muestran que producir es una actividad profundamente ligada a la evolución de la humanity. Desde la producción artesanal hasta los sistemas automatizados actuales, cada etapa refleja las necesidades, los valores y el nivel tecnológico de su tiempo. Comprender esta evolución permite analizar críticamente los sistemas productivos actuales y prepararse para los desafíos futuros, especialmente en un mundo donde la tecnología y la información ocupan un lugar central."
     },
     {
       "type": "texto",
