@@ -1,6 +1,5 @@
-
-import { Unit } from './types';
-import { curriculumData } from './curriculumData';
+import { Unit } from './types.ts';
+import { curriculumData } from './curriculumData.ts';
 
 /**
  * Normaliza los datos del currículum.
