@@ -1,4 +1,4 @@
-import { Block } from './types';
+import { Block } from './types.ts';
 
 // Updated type from Unit[] to Block[] to match the object structure and string IDs.
 export const curriculumData: Block[] = [
