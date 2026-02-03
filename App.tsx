@@ -1,12 +1,12 @@
 import React, { useState, useEffect } from 'react';
-import { CURRICULUM } from './constants.tsx';
-import { UserProgress, Unit, Block } from './types.ts';
-import Sidebar from './components/Sidebar.tsx';
-import Header from './components/Header.tsx';
-import BlockViewer from './components/BlockViewer.tsx';
-import SelfAssessment from './components/SelfAssessment.tsx';
-import Home from './components/Home.tsx';
-import Unit1Test from './components/Unit1Test.tsx';
+import { CURRICULUM } from './constants';
+import { UserProgress, Unit, Block } from './types';
+import Sidebar from './components/Sidebar';
+import Header from './components/Header';
+import BlockViewer from './components/BlockViewer';
+import SelfAssessment from './components/SelfAssessment';
+import Home from './components/Home';
+import Unit1Test from './components/Unit1Test';
 
 const App: React.FC = () => {
   const [view, setView] = useState<'home' | 'block' | 'assessment' | 'test-u1'>('home');
@@ -62,7 +62,7 @@ const App: React.FC = () => {
     setView('test-u1');
   };
 
-  // Selección ultra-segura de datos para evitar errores de .find en undefined o arrays vacíos
+  // Selección segura de datos
   const safeCurriculum = CURRICULUM || [];
   const currentUnit = safeCurriculum.find(u => u.id === currentUnitId) || safeCurriculum[0] || null;
   const blocks = currentUnit?.blocks || [];
